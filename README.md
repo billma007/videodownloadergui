@@ -4,6 +4,10 @@ A program that uses Python and has a GUI interface to download web video
 
 一个使用python且拥有GUI界面的可以下载网页视频的程序
 
+## 原理/principle
+
+使用you-get编译进一个GUI程序，在没有python环境下也能用。
+
 ## 如何使用？/How To Use?
 
 ```cmd
@@ -52,7 +56,7 @@ you-get:       and report this issue with the full output.
 
 #### 第一步
 
-认为这是源代码没有被正确引用的问题~~（思路正确，解决办法错误）~~，于是将you-get的源代码拖到了目录底下。
+认为这是源代码没有被正确引用的问题~~思路正确，解决办法错误~~，于是将you-get的源代码拖到了目录底下。
 
 再编译，没用。
 
@@ -96,18 +100,6 @@ you-get:       and report this issue with the full output.
 ```cmd
 pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you_get.processor --hidden-import=you_get.utl --hidden-import=you_get.extractors
 ```
-
-## 关于作者/About
-
-江苏省苏州市的一个普通高中牲，一个~~因为玩电脑被学校处分~~在省赛就被刷下来的信息学奥林匹克竞赛选手，热爱编程，但不喜欢前端。
-
-欢迎通过以下联系方式与我探讨信息竞赛、博客搭建、学术讨论以及扯皮：
-
-- QQ:36937975
-- Twitter:@billma6688
-- Facebook/Instagram:billma007
-- CodeForces/USACO/AtCoder:billma007(不常用/not use them usually)
-- Email:maboning237103015@163.com
 
 ## 支持的网页/Supported Sites
 
@@ -191,6 +183,18 @@ pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you
 | TikTok | <https://www.tiktok.com/>      |✓| | |
 | 中国体育(TV) | <http://v.zhibo.tv/> </br><http://video.zhibo.tv/>    |✓| | |
 | 知乎 | <https://www.zhihu.com/>      |✓| | |
+
+## 关于作者/About
+
+江苏省苏州市的一个普通高中牲，一个~~因为玩电脑被学校处分~~在省赛就被刷下来的信息学奥林匹克竞赛选手，热爱编程，但不喜欢前端。
+
+欢迎通过以下联系方式与我探讨信息竞赛、博客搭建、学术讨论以及扯皮：
+
+- QQ:36937975
+- Twitter:@billma6688
+- Facebook/Instagram:billma007
+- CodeForces/USACO/AtCoder:billma007(不常用/not use them usually)
+- Email:maboning237103015@163.com
 
 对于列表之外的所有其他网站，软件将会尽力爬取视频。
 
