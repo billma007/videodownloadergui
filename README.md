@@ -184,6 +184,10 @@ pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you
 | 中国体育(TV) | <http://v.zhibo.tv/> </br><http://video.zhibo.tv/>    |✓| | |
 | 知乎 | <https://www.zhihu.com/>      |✓| | |
 
+对于列表之外的所有其他网站，软件将会尽力爬取视频。
+
+For all other sites not on the list, the universal extractor will take care of finding and downloading interesting resources from the page.
+
 ## 关于作者/About
 
 江苏省苏州市的一个普通高中牲，一个~~因为玩电脑被学校处分~~在省赛就被刷下来的信息学奥林匹克竞赛选手，热爱编程，但不喜欢前端。
@@ -196,9 +200,6 @@ pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you
 - CodeForces/USACO/AtCoder:billma007(不常用/not use them usually)
 - Email:maboning237103015@163.com
 
-对于列表之外的所有其他网站，软件将会尽力爬取视频。
-
-For all other sites not on the list, the universal extractor will take care of finding and downloading interesting resources from the page.
 
 ## 推广：个人博客/Blog
 
