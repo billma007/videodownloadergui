@@ -108,7 +108,94 @@ pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you
 - Facebook/Instagram:billma007
 - CodeForces/USACO/AtCoder:billma007(不常用/not use them usually)
 - Email:maboning237103015@163.com
-- 
+
+## 支持的网页/Supported Sites
+
+| Site | URL | Videos? | Images? | Audios? |
+| :--: | :-- | :-----: | :-----: | :-----: |
+| **YouTube** | <https://www.youtube.com/>    |✓| | |
+| **Twitter** | <https://twitter.com/>        |✓|✓| |
+| VK          | <http://vk.com/>              |✓|✓| |
+| Vine        | <https://vine.co/>            |✓| | |
+| Vimeo       | <https://vimeo.com/>          |✓| | |
+| Veoh        | <http://www.veoh.com/>        |✓| | |
+| **Tumblr**  | <https://www.tumblr.com/>     |✓|✓|✓|
+| TED         | <http://www.ted.com/>         |✓| | |
+| SoundCloud  | <https://soundcloud.com/>     | | |✓|
+| SHOWROOM    | <https://www.showroom-live.com/> |✓| | |
+| Pinterest   | <https://www.pinterest.com/>  | |✓| |
+| MTV81       | <http://www.mtv81.com/>       |✓| | |
+| Mixcloud    | <https://www.mixcloud.com/>   | | |✓|
+| Metacafe    | <http://www.metacafe.com/>    |✓| | |
+| Magisto     | <http://www.magisto.com/>     |✓| | |
+| Khan Academy | <https://www.khanacademy.org/> |✓| | |
+| Internet Archive | <https://archive.org/>   |✓| | |
+| **Instagram** | <https://instagram.com/>    |✓|✓| |
+| InfoQ       | <http://www.infoq.com/presentations/> |✓| | |
+| Imgur       | <http://imgur.com/>           | |✓| |
+| Heavy Music Archive | <http://www.heavy-music.ru/> | | |✓|
+| Freesound   | <http://www.freesound.org/>   | | |✓|
+| Flickr      | <https://www.flickr.com/>     |✓|✓| |
+| FC2 Video   | <http://video.fc2.com/>       |✓| | |
+| Facebook    | <https://www.facebook.com/>   |✓| | |
+| eHow        | <http://www.ehow.com/>        |✓| | |
+| Dailymotion | <http://www.dailymotion.com/> |✓| | |
+| Coub        | <http://coub.com/>            |✓| | |
+| CBS         | <http://www.cbs.com/>         |✓| | |
+| Bandcamp    | <http://bandcamp.com/>        | | |✓|
+| AliveThai   | <http://alive.in.th/>         |✓| | |
+| interest.me | <http://ch.interest.me/tvn>   |✓| | |
+| **755<br/>ナナゴーゴー** | <http://7gogo.jp/> |✓|✓| |
+| **niconico<br/>ニコニコ動画** | <http://www.nicovideo.jp/> |✓| | |
+| **163<br/>网易视频<br/>网易云音乐** | <http://v.163.com/><br/><http://music.163.com/> |✓| |✓|
+| 56网     | <http://www.56.com/>           |✓| | |
+| **AcFun** | <http://www.acfun.cn/>        |✓| | |
+| **Baidu<br/>百度贴吧** | <http://tieba.baidu.com/> |✓|✓| |
+| 爆米花网 | <http://www.baomihua.com/>     |✓| | |
+| **bilibili<br/>哔哩哔哩** | <http://www.bilibili.com/> |✓|✓|✓|
+| 豆瓣     | <http://www.douban.com/>       |✓| |✓|
+| 斗鱼     | <http://www.douyutv.com/>      |✓| | |
+| 凤凰视频 | <http://v.ifeng.com/>          |✓| | |
+| 风行网   | <http://www.fun.tv/>           |✓| | |
+| iQIYI<br/>爱奇艺 | <http://www.iqiyi.com/> |✓| | |
+| 激动网   | <http://www.joy.cn/>           |✓| | |
+| 酷6网    | <http://www.ku6.com/>          |✓| | |
+| 酷狗音乐 | <http://www.kugou.com/>        | | |✓|
+| 酷我音乐 | <http://www.kuwo.cn/>          | | |✓|
+| 乐视网   | <http://www.le.com/>           |✓| | |
+| 荔枝FM   | <http://www.lizhi.fm/>         | | |✓|
+| 懒人听书 | <http://www.lrts.me/>          | | |✓|
+| 秒拍     | <http://www.miaopai.com/>      |✓| | |
+| MioMio弹幕网 | <http://www.miomio.tv/>    |✓| | |
+| MissEvan<br/>猫耳FM | <http://www.missevan.com/> | | |✓|
+| 痞客邦   | <https://www.pixnet.net/>      |✓| | |
+| PPTV聚力 | <http://www.pptv.com/>         |✓| | |
+| 齐鲁网   | <http://v.iqilu.com/>          |✓| | |
+| QQ<br/>腾讯视频 | <http://v.qq.com/>      |✓| | |
+| 企鹅直播 | <http://live.qq.com/>          |✓| | |
+| Sina<br/>新浪视频<br/>微博秒拍视频 | <http://video.sina.com.cn/><br/><http://video.weibo.com/> |✓| | |
+| Sohu<br/>搜狐视频 | <http://tv.sohu.com/> |✓| | |
+| **Tudou<br/>土豆** | <http://www.tudou.com/> |✓| | |
+| 阳光卫视 | <http://www.isuntv.com/>       |✓| | |
+| **Youku<br/>优酷** | <http://www.youku.com/> |✓| | |
+| 战旗TV   | <http://www.zhanqi.tv/lives>   |✓| | |
+| 央视网   | <http://www.cntv.cn/>          |✓| | |
+| Naver<br/>네이버 | <http://tvcast.naver.com/>     |✓| | |
+| 芒果TV   | <http://www.mgtv.com/>         |✓| | |
+| 火猫TV   | <http://www.huomao.com/>       |✓| | |
+| 阳光宽频网 | <http://www.365yg.com/>      |✓| | |
+| 西瓜视频 | <https://www.ixigua.com/>      |✓| | |
+| 新片场 | <https://www.xinpianchang.com/>      |✓| | |
+| 快手 | <https://www.kuaishou.com/>      |✓|✓| |
+| 抖音 | <https://www.douyin.com/>      |✓| | |
+| TikTok | <https://www.tiktok.com/>      |✓| | |
+| 中国体育(TV) | <http://v.zhibo.tv/> </br><http://video.zhibo.tv/>    |✓| | |
+| 知乎 | <https://www.zhihu.com/>      |✓| | |
+
+对于列表之外的所有其他网站，软件将会尽力爬取视频。
+
+For all other sites not on the list, the universal extractor will take care of finding and downloading interesting resources from the page.
+
 ## 推广：个人博客/Blog
 
 [欢迎来到我的博客/Welcome Here!](https://billma.top)
