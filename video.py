@@ -18,7 +18,7 @@ class Download:
     def __init__(self, width=400, height=170):
         self.w = width
         self.h = height
-        self.title = '马哥视频下载GUI1.0'
+        self.title = '马哥视频下载GUI1.1'
         self.root = tk.Tk(className=self.title)
         self.url = tk.StringVar()
         self.start = tk.IntVar()
