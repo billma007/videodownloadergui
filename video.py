@@ -7,6 +7,7 @@ import tkinter.messagebox as msgbox
 import webbrowser
 import you_get
 import base64
+import pyperclip
 
 class Download:
     # construct
@@ -17,13 +18,14 @@ class Download:
     def __init__(self, width=400, height=170):
         self.w = width
         self.h = height
-        self.title = '马哥视频下载'
+        self.title = '马哥视频下载GUI1.0'
         self.root = tk.Tk(className=self.title)
         self.url = tk.StringVar()
         self.start = tk.IntVar()
         self.end = tk.IntVar()
         self.path = tk.StringVar()
         self.path.set('D:/')
+
         
        
 
@@ -35,11 +37,24 @@ class Download:
  
         menu = tk.Menu(self.root)
         self.root.config(menu=menu)
-        menu1 = tk.Menu(menu, tearoff=0)
-        menu.add_cascade(label='选项', menu=menu1)
-        menu1.add_command(label='GitHub', command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui'))
-        menu1.add_command(label='退出', command=lambda: self.root.quit())
- 
+        # menu1 = tk.Menu(menu, tearoff=0)
+        # menu.add_cascade(label='帮助', menu=menu1)
+        # menu1.add_command(label='GitHub开源地址', command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui'))
+        # menu1.add_command(label="对软件有疑问",command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui/blob/main/xiaobaiQuestions_Chinese.md'))
+        # menu1.add_command(label='退出', command=lambda: self.root.quit())
+
+        menu3 = tk.Menu(menu,tearoff=2)
+        menu.add_command(label="*粘贴*",command=lambda: self.url.set(pyperclip.paste()))
+        menu.add_command(label='GitHub开源地址', command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui'))
+        menu.add_command(label='*帮助*', command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui/blob/main/xiaobaiQuestions_Chinese.md'))
+        menu.add_command(label='退出', command=lambda: self.root.quit())
+        menu2 = tk.Menu(menu,tearoff=1)
+        menu.add_cascade(label="推广",menu=menu2)
+        menu2.add_command(label="视频下载器",command=lambda:  webbrowser.open('https://github.com/billma007/videodownloadergui') )
+        menu2.add_command(label="天气一秒查",command=lambda:  webbrowser.open('https://github.com/billma007/weatherGUI2') )
+        menu2.add_command(label="聊天机器人",command=lambda:  webbrowser.open('https://github.com/billma007/mgchatrobot2') )
+        menu2.add_command(label="翻译机",command=lambda:  webbrowser.open('https://github.com/billma007/pythontranslator') )
+        menu2.add_command(label="更多",command=lambda:  webbrowser.open('https://billma.top/moresoftware') )
         # set frame_1
         label1 = tk.Label(frame_1, text='输入视频链接：')
         entry_url = tk.Entry(frame_1, textvariable=self.url, highlightcolor='Fuchsia', highlightthickness=1, width=35)
@@ -58,12 +73,12 @@ class Download:
                               text='本项目已在GitHub上开源,遵守GNU通用公共许可证(GPL)')
         label_jnxxhzz = tk.Label(frame_4, fg='red', font=('楷体', 10),
                               text='Copyright (C) 2022 billma007')
- 
+
+
         frame_1.pack()
         frame_2.pack()
         frame_3.pack()
         frame_4.pack()
- 
         label1.grid(row=0, column=0)
         entry_url.grid(row=0, column=1)
  
@@ -72,7 +87,6 @@ class Download:
         
         url_path.grid(row=1,column=0, ipadx=20,padx = 5)
         down.grid(row=1, column=3, ipadx=20)
-        
         label_desc.grid(row=1, column=0)
         label_jnxxhzz.grid(row=2, column=0)
 
