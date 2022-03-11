@@ -1,15 +1,12 @@
-# videodownloadergui
 
-A program that uses Python and has a GUI interface to download web video
 
 一个使用python且拥有GUI界面的可以下载网页视频的程序
 
-## 原理/principle
+## 原理
 
 使用you-get编译进一个GUI程序，在没有python环境下也能用。
 
-## 如何使用？/How To Use?
-
+## 如何使用？
 ```cmd
 git clone https://github.com/billma007/videodownloadergui.git
 cd videodownloadergui
@@ -17,7 +14,7 @@ pip install you-get
 py video.py
 ```
 
-## 如何编译？/How to compile it?
+## 如何编译？
 
 我在这一步上面，想我前面的大多数人一样，踩了无数次的坑，都没有成功编译使用you-get驱动的python文件。
 
@@ -101,9 +98,9 @@ you-get:       and report this issue with the full output.
 pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you_get.processor --hidden-import=you_get.utl --hidden-import=you_get.extractors
 ```
 
-## 支持的网页/Supported Sites
+## 支持的网页/
 
-| Site | URL | Videos? | Images? | Audios? |
+| 网站名称 | 网址 |视频支持| 图像支持 | 音频支持 |
 | :--: | :-- | :-----: | :-----: | :-----: |
 | **YouTube** | <https://www.youtube.com/>    |✓| | |
 | **Twitter** | <https://twitter.com/>        |✓|✓| |
@@ -186,9 +183,7 @@ pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you
 
 对于列表之外的所有其他网站，软件将会尽力爬取视频。
 
-For all other sites not on the list, the universal extractor will take care of finding and downloading interesting resources from the page.
-
-## 关于作者/About
+## 关于作者
 
 江苏省苏州市的一个普通高中牲，一个~~因为玩电脑被学校处分~~在省赛就被刷下来的信息学奥林匹克竞赛选手，热爱编程，但不喜欢前端。
 
@@ -201,9 +196,9 @@ For all other sites not on the list, the universal extractor will take care of f
 - Email:maboning237103015@163.com
 
 
-## 推广：个人博客/Blog
+## 推广：个人博客
 
-[欢迎来到我的博客/Welcome Here!](https://billma.top)
+[欢迎来到我的博客](https://billma.top)
 
 ## LICENSE
 
