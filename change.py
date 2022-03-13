@@ -2,13 +2,21 @@ import os
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
 import tkinter.messagebox as msgbox
+from tkinter import IntVar
 from  webbrowser import open_new
 import ffmpeg
+import settingsvideo
+hflipset = False
+vflipset = False
 class CHANGE:
     # construct
     def selectPath(changeroot):
     	path_=askopenfilename()
     	changeroot.path.set(path_)
+
+    def hflip_enable(changeroot):
+        global hflipset
+        hflipset = True
     
     def __init__(changeroot, width=550, height=170):
         changeroot.w = width
@@ -20,18 +28,24 @@ class CHANGE:
         changeroot.end = tk.IntVar()
         changeroot.path = tk.StringVar()
         changeroot.path.set('D:/example.mp4')
-        
-        
+        global hflipset
+        global vflipset
+        hflipset=IntVar()
+        vflipset=IntVar()
         menu = tk.Menu(changeroot.root)
         changeroot.root.config(menu=menu)
         menu1 = tk.Menu(menu, tearoff=0)
-        menu.add_cascade(label='如果显示ffmpeg缺失请从这里下载', menu=menu1)
+        menu2 = tk.Menu(menu,tearoff=0)
+        menu.add_cascade(label='下载ffmpeg', menu=menu1)
         menu1.add_command(label="GitHub官方下载(中国大陆用户可能较慢)",command=lambda:open_new("https://github.com/billma007/videodownloadergui/releases/download/download/ffmpeg.exe"))
         menu1.add_command(label="蓝奏云下载(推荐，密码ffmpeg)",command=lambda:open_new("https://wwp.lanzouq.com/i1r7701bvk5e"))
         menu1.add_command(label="GitHub中国镜像网站下载1(很不稳定,可能会被误报读)",command=lambda:open_new("https://ghproxy.com/https://github.com/billma007/videodownloadergui/releases/download/download/ffmpeg.exe"))
         menu1.add_command(label="GitHub中国镜像网站下载2(很不稳定,可能会被误报读)",command=lambda:open_new("https://github.91chi.fun/https://github.com//billma007/videodownloadergui/releases/download/download/ffmpeg.exe"))
         menu.add_command(label="前往GitHub开源地址",command=lambda:open_new("https://github.com/billma007/videodownloadergui/"))
         menu.add_command(label="查看如何使用以及范例",command=lambda:open_new("https://github.com/billma007/videodownloadergui/README_change-cn.md"))
+        menu.add_cascade(label='更多功能',menu=menu2)
+        menu2.add_checkbutton(label="水平翻转",onvalue=1,offvalue=0,variable=hflipset)
+        menu2.add_checkbutton(label="垂直翻转",onvalue=1,offvalue=0,variable=vflipset)
         menu.add_command(label="退出",command=lambda:changeroot.root.quit())
         # define frame
         frame_1 = tk.Frame(changeroot.root)
@@ -92,12 +106,16 @@ class CHANGE:
         else:
             msgbox.showwarning(title='警告', message='转码过程中窗口如果出现短暂卡顿说明文件正在转码中！技术原因，转码很慢，大约每分钟视频需要20-50s转码，请耐心等待！')
             try:
+                print("hflipset=",hflipset.get())
+                print("vflipset=",vflipset.get())
                 changeroot.root.withdraw()
-                ffmpeg \
-                .input(path) \
-                .hflip() \
-                .output(url) \
-                .run()
+                stream = ffmpeg.input(path)
+                if hflipset.get() == True:
+                    stream = ffmpeg.hflip(stream)
+                if vflipset.get() == True:
+                    stream = ffmpeg.vflip(stream)
+                stream = ffmpeg.output(stream,url)
+                ffmpeg.run(stream)
                 msgbox.showinfo(title='成功', message='转码完成！')
                 changeroot.root.wm_deiconify()
             except Exception as e:
@@ -120,3 +138,4 @@ def changemain():
     app_change = CHANGE()
     app_change.event()
 
+changemain()
