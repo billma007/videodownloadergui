@@ -5,7 +5,6 @@ import tkinter.messagebox as msgbox
 from tkinter import IntVar
 from  webbrowser import open_new
 import ffmpeg
-import settingsvideo
 hflipset = False
 vflipset = False
 class CHANGE:
@@ -137,5 +136,3 @@ class CHANGE:
 def changemain():
     app_change = CHANGE()
     app_change.event()
-
-changemain()
