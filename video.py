@@ -1,20 +1,24 @@
 import re
 import sys
-import os
+import time
 import tkinter as tk
 from tkinter.filedialog import askdirectory
 import tkinter.messagebox as msgbox
-import webbrowser
+from webbrowser import open_new
 import you_get
-import base64
-import pyperclip
-
+from pyperclip import paste
+import change
+from  threading import Thread
+from tqdm import tqdm
+jjjjj=False
 class Download:
     # construct
     def selectPath(self):
     	path_=askdirectory()
     	self.path.set(path_)
-    
+    def changeto(self):
+        self.root.destroy()
+        change.changemain()
     def __init__(self, width=400, height=170):
         self.w = width
         self.h = height
@@ -39,22 +43,23 @@ class Download:
         self.root.config(menu=menu)
         # menu1 = tk.Menu(menu, tearoff=0)
         # menu.add_cascade(label='帮助', menu=menu1)
-        # menu1.add_command(label='GitHub开源地址', command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui'))
-        # menu1.add_command(label="对软件有疑问",command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui/blob/main/xiaobaiQuestions_Chinese.md'))
+        # menu1.add_command(label='GitHub开源地址', command=lambda: open_new('https://github.com/billma007/videodownloadergui'))
+        # menu1.add_command(label="对软件有疑问",command=lambda: open_new('https://github.com/billma007/videodownloadergui/blob/main/xiaobaiQuestions_Chinese.md'))
         # menu1.add_command(label='退出', command=lambda: self.root.quit())
 
         menu3 = tk.Menu(menu,tearoff=2)
-        menu.add_command(label="*粘贴*",command=lambda: self.url.set(pyperclip.paste()))
-        menu.add_command(label='GitHub开源地址', command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui'))
-        menu.add_command(label='*帮助*', command=lambda: webbrowser.open('https://github.com/billma007/videodownloadergui/blob/main/xiaobaiQuestions_Chinese.md'))
+        menu.add_command(label="*粘贴*",command=lambda: self.url.set(paste()))
+        menu.add_command(label='GitHub开源地址', command=lambda: open_new('https://github.com/billma007/videodownloadergui'))
+        menu.add_command(label='*帮助*', command=lambda: open_new('https://github.com/billma007/videodownloadergui/blob/main/xiaobaiQuestions_Chinese.md'))
         menu.add_command(label='退出', command=lambda: self.root.quit())
+        menu.add_command(label="【拓展功能】视频转码",command=self.changeto )
         menu2 = tk.Menu(menu,tearoff=1)
         menu.add_cascade(label="推广",menu=menu2)
-        menu2.add_command(label="视频下载器",command=lambda:  webbrowser.open('https://github.com/billma007/videodownloadergui') )
-        menu2.add_command(label="天气一秒查",command=lambda:  webbrowser.open('https://github.com/billma007/weatherGUI2') )
-        menu2.add_command(label="聊天机器人",command=lambda:  webbrowser.open('https://github.com/billma007/mgchatrobot2') )
-        menu2.add_command(label="翻译机",command=lambda:  webbrowser.open('https://github.com/billma007/pythontranslator') )
-        menu2.add_command(label="更多",command=lambda:  webbrowser.open('https://billma.top/moresoftware') )
+        menu2.add_command(label="视频下载器",command=lambda:  open_new('https://github.com/billma007/videodownloadergui') )
+        menu2.add_command(label="天气一秒查",command=lambda:  open_new('https://github.com/billma007/weatherGUI2') )
+        menu2.add_command(label="聊天机器人",command=lambda:  open_new('https://github.com/billma007/mgchatrobot2') )
+        menu2.add_command(label="翻译机",command=lambda:  open_new('https://github.com/billma007/pythontranslator') )
+        menu2.add_command(label="更多",command=lambda:  open_new('https://billma.top/moresoftware') )
         # set frame_1
         label1 = tk.Label(frame_1, text='输入视频链接：')
         entry_url = tk.Entry(frame_1, textvariable=self.url, highlightcolor='Fuchsia', highlightthickness=1, width=35)
@@ -123,9 +128,22 @@ class Download:
     def event(self):
         self.root.resizable(False, False)
         self.center()
+        global jjjjj
+        jjjjj=True
         self.root.mainloop()
- 
- 
-if __name__ == '__main__':
+
+def main():
     app = Download()
     app.event()
+def waiting():
+    print("启动较慢，请耐心等候.....")
+    for i in tqdm(range(1, 101)):
+        if jjjjj==False:
+            time.sleep(0.05)
+    print("欢迎使用！")
+if __name__ == '__main__':
+    
+    main_thread=Thread(target=waiting)
+    waiting_thread=Thread(target=main)
+    main_thread.start()
+    waiting_thread.start()

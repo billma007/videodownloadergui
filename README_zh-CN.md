@@ -1,5 +1,4 @@
 
-
 一个使用python且拥有GUI界面的可以下载网页视频的程序
 
 ## 原理
@@ -7,6 +6,7 @@
 使用you-get编译进一个GUI程序，在没有python环境下也能用。
 
 ## 如何使用？
+
 ```cmd
 git clone https://github.com/billma007/videodownloadergui.git
 cd videodownloadergui
@@ -194,7 +194,6 @@ pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you
 - Facebook/Instagram:billma007
 - CodeForces/USACO/AtCoder:billma007(不常用/not use them usually)
 - Email:maboning237103015@163.com
-
 
 ## 推广：个人博客
 

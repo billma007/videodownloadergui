@@ -1,0 +1,4 @@
+pyperclip
+you-get
+tqdm
+ffmpeg-python
