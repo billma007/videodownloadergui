@@ -10,9 +10,15 @@
 ```cmd
 git clone https://github.com/billma007/videodownloadergui.git
 cd videodownloadergui
-pip install you-get
+pip install -r requirements.txt
 py video.py
 ```
+
+本README主要介绍you-get，转码部分[请看这里](README_change-cn.md)
+
+具体的使用说明[请看这里](xiaobaiQuestions_Chinese.md)
+
+英文版[请看这里](README.md)
 
 ## 如何编译？
 

@@ -15,7 +15,7 @@ English/[简体中文](README_zh-CN.md)
 ```cmd
 git clone  https://github.com/billma007/videodownloadergui.git
 cd videodownloadergui
-pip install you-get
+pip install -r requirements.txt
 py video. py
 ```
 
