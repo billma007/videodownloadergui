@@ -30,7 +30,7 @@ I don't want anyone to bury this hole.
 ### Correct compilation method
 
 ```cmd
-pyinstaller -F video. py  --hidden-import=you_ get. cli_ wrapper --hidden-import=you_ get. processor --hidden-import=you_ get. utl --hidden-import=you_ get. extractors
+pyinstaller -F video.py  --hidden-import=you_get.cli_wrapper --hidden-import=you_get.processor --hidden-import=you_get.utl --hidden-import=you_get.extractors
 ```
 
 ### What is this
@@ -39,7 +39,7 @@ I believe most people use the following instructions as I thought at first:
 
 ```cmd
 pip install pyinstaller
-pyinstaller -F video. pu
+pyinstaller -F video. py
 ```
 
 Compilation went well! I opened the compiled program and an error occurred:
